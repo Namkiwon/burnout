@@ -17,8 +17,10 @@ import android.view.Window;
 import android.widget.Button;
 
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.project.unithon.unithon.http.CheckSerial;
 
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 
 public class MainActivity extends FragmentActivity {
@@ -31,6 +33,7 @@ public class MainActivity extends FragmentActivity {
     SharedMemory sharedMemory;
     Boolean isDownloadFirst = false;
     UserInfoVO userinfo;
+    String answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,15 @@ public class MainActivity extends FragmentActivity {
 
         sharedMemory.setSerialnumber(serialnumber);
 
+        CheckSerial CS = new CheckSerial();
+        try {
+            answer = CS.execute().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        Log.d("answer",answer);
 
         //토큰값을 받기위해 브로드캐스트 리시버 설
         LocalBroadcastManager.getInstance(this).registerReceiver(tokenReceiver,
