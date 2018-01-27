@@ -7,32 +7,33 @@ import java.io.Serializable;
  */
 
 public class UserInfoVO implements Serializable {
-    private String serialnumber;
 
-    public String getSerialnumber() {
-        return serialnumber;
+
+   private String age;
+   private String sex;
+   private String job;
+
+    public String getJob() {
+        return job;
     }
 
-    public void setSerialnumber(String serialnumber) {
-        this.serialnumber = serialnumber;
+    public void setJob(String job) {
+        this.job = job;
     }
 
-    private String token;
-    private String nickname;
-
-    public String getToken() {
-        return token;
+    public String getAge() {
+        return age;
     }
 
-    public void setToken(String token) {
-        this.token = token;
+    public void setAge(String age) {
+        this.age = age;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getSex() {
+        return sex;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }

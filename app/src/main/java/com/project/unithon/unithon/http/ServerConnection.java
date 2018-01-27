@@ -39,7 +39,7 @@ public class ServerConnection extends AsyncTask<Void,Void,String> {
 
         requestBody = new FormBody.Builder()
                 .add("Type","token")
-                .add("token",sharedMemory.getUserinfo().getToken()).build();
+                .add("token",sharedMemory.getUserinfo().getAge()).build();
         Request request = new Request.Builder()
                 .url("http://117.17.142.134:8080/Band/BandServer")
                 .post(requestBody)

@@ -45,7 +45,7 @@ public class MainActivity extends FragmentActivity {
 
         String serialnumber = getDeviceSerialNumber();
 
-        userinfo.setSerialnumber(serialnumber);
+        sharedMemory.setSerialnumber(serialnumber);
 
 
         //토큰값을 받기위해 브로드캐스트 리시버 설
@@ -66,8 +66,8 @@ public class MainActivity extends FragmentActivity {
 //                    }else{ //가지고 있는 토큰으로 아이디를 찾았을 경우
 //                        Log.d(">>>>>>>>>",answer + "aaaaaaaaa");
 //                        userinfo = gson.fromJson(answer,UserInfo.class);
-                            userinfo.setToken(token);
-                            sharedMemory.setUserinfo(userinfo);
+
+                            sharedMemory.setToken(token);
 
                         startActivity(HomeIntent);
                         finish();}
@@ -95,16 +95,12 @@ public class MainActivity extends FragmentActivity {
                 //send token to your server or what you want to do
                 //토큰이 새로 만들어졌을 경우
                     isDownloadFirst = true;
-                    userinfo.setToken(token);
-                    sharedMemory.setUserinfo(userinfo);;
+                    sharedMemory.setToken(token);
                     startActivity(LoginIntent);
                     finish();
                 }
         }
     };
-
-
-
 
     private static String getDeviceSerialNumber() {
         try {

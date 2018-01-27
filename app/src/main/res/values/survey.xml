@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="officeworker">
+        <item >관리 운영이 필요한 일을 해요</item>
+        <item >전문적인 기술이 필요한 일을 해요</item>
+        <item >사무적인 일 하고있어요</item>
+        <item >판매,서비스직 일을 해요</item>
+        <item >단순 노동 하는 일을 해요</item>
+        <item >군 복무를 하고있어요</item>
+    </string-array>
+
+    <string-array name="readytransfer">
+    <item >관리 운영이 필요한 일을 해요</item>
+    <item >전문적인 기술이 필요한 일을 해요</item>
+    <item >사무적인 일 하고있어요</item>
+    <item >판매,서비스직 일을 해요</item>
+    <item >단순 노동 하는 일을 해요</item>
+    <item >군 복무를 하고있어요</item>
+    </string-array>
+
+    <string-array name="job">
+        <item >학생</item>
+        <item >직장인</item>
+        <item >이직준비</item>
+        <item >무직</item>
+        <item >주부/가사</item>
+
+    </string-array>
+
+    <string-array name="sex">
+        <item >남</item>
+        <item >여</item>
+
+    </string-array>
+
+    <string-array name="age">
+        <item >10</item>
+        <item >11</item>
+        <item >12</item>
+        <item >13</item>
+        <item >14</item>
+        <item >15</item>
+        <item >16</item>
+        <item >17</item>
+        <item >18</item>
+        <item >19</item>
+        <item >20</item>
+        <item >21</item>
+        <item >22</item>
+        <item >23</item>
+        <item >24</item>
+        <item >25</item>
+        <item >26</item>
+        <item >27</item>
+        <item >28</item>
+        <item >29</item>
+        <item >30</item>
+        <item >31</item>
+
+
+
+
+    </string-array>
+
+</resources>

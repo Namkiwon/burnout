@@ -3,34 +3,36 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="성별"/>
 
-    <Spinner
-        android:id="@+id/spinner_sex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/sex"
-        ></Spinner>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="나이"/>
+        android:text="직업"/>
 
     <Spinner
-        android:id="@+id/spinner_age"
+        android:id="@+id/spinner_job"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/age"
+        android:entries="@array/job"
         ></Spinner>
+
+    <TextView
+        android:id="@+id/txt_job2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="직업2"/>
+
+    <Spinner
+        android:id="@+id/spinner_job2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></Spinner>
+
 
     <Button
-        android:id="@+id/firstsurvey_next"
+        android:id="@+id/secondsurvey_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="firstsurvey_next"/>
+        android:text="secondsurvey_next"/>
 </LinearLayout>

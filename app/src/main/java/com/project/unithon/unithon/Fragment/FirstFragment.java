@@ -48,9 +48,9 @@ public class FirstFragment extends Fragment {
         
         items = new ArrayList<ListviewVO>();
         ListviewVO a = new ListviewVO();
-        a.setWiseSaying("asdfadsfadsfasdfasdfasdfasdfasdfasdf");
+        a.setWiseSaying(sharedMemory.getSerialnumber());
         ListviewVO b = new ListviewVO();
-        b.setWiseSaying("asdf");
+        b.setWiseSaying(sharedMemory.getToken());
         items.add(a);
         items.add(b);
 

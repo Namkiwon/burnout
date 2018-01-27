@@ -7,16 +7,38 @@ package com.project.unithon.unithon;
 
 public class SharedMemory {
     private static SharedMemory sharedMemory = null;
+    private static UserInfoVO userinfo = null;
 
     public static synchronized SharedMemory getinstance(){
         if(sharedMemory == null){
             sharedMemory = new SharedMemory();
         }
+        if(userinfo == null){
+            userinfo = new UserInfoVO();
+        }
         return sharedMemory;
     }
-    private String resultString;
-    private UserInfoVO userinfo;
+
     private String url;
+    private String serialnumber;
+    private String token;
+
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getSerialnumber() {
+        return serialnumber;
+    }
+
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
+    }
 
 
     public String getUrl() {
@@ -34,13 +56,4 @@ public class SharedMemory {
     public void setUserinfo(UserInfoVO userinfo) {
         this.userinfo = userinfo;
     }
-
-    public String getResultString() {
-        return resultString;
-    }
-
-    public void setResultString(String resultString) {
-        this.resultString = resultString;
-    }
-
 }
