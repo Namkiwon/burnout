@@ -19,11 +19,10 @@ public class FirstSurveyActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firstsurvey);
-        int titlecolor = Color.parseColor("#00BBBB");
-        getSupportActionBar().setTitle("Sign Up");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(titlecolor));
+        getSupportActionBar().setTitle("Survey");
 
         next = (Button) findViewById(R.id.firstsurvey_next);
+        next.setOnClickListener(bListener);
 
     }
 
@@ -35,6 +34,7 @@ public class FirstSurveyActivity extends AppCompatActivity{
                 case R.id.firstsurvey_next:
                     Intent HomeIntent = new Intent(FirstSurveyActivity.this,HomeActivity.class);
                     startActivity(HomeIntent);
+                    finish();
             }
         }
     };

@@ -7,6 +7,16 @@ import java.io.Serializable;
  */
 
 public class UserInfoVO implements Serializable {
+    private String serialnumber;
+
+    public String getSerialnumber() {
+        return serialnumber;
+    }
+
+    public void setSerialnumber(String serialnumber) {
+        this.serialnumber = serialnumber;
+    }
+
     private String token;
     private String nickname;
 

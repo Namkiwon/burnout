@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity"
+    >
+
+
+    <item
+        android:id="@+id/first_page"
+        android:icon="@mipmap/ic_launcher_round"
+        android:orderInCategory="0"
+        android:title="menu"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/second_page"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory="0"
+        android:title="menu"
+        app:showAsAction="always">
+
+    </item>
+
+
+</menu>

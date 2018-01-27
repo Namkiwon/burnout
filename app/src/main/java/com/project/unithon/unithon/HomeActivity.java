@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,15 +20,10 @@ import com.project.unithon.unithon.Fragment.ThirdFragment;
  */
 
 public class HomeActivity extends AppCompatActivity {
-    ViewPager vp;
-    Button firstpage;
-    Button secondpage;
-    Button thirdpage;
-    FirstFragment first;
-    SecondFragment second;
-    ThirdFragment third;
-    String type;
-    String token;
+    private ViewPager vp;
+
+    private FirstFragment first;
+    private SecondFragment second;
 
     Fragment cur_fragment = new Fragment();
 
@@ -33,25 +31,37 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        token = getIntent().getStringExtra("token");
-        type = getIntent().getStringExtra("type");
+        getSupportActionBar().setTitle("Home");
         vp = (ViewPager) findViewById(R.id.home_viewpager);
-        firstpage = (Button) findViewById(R.id.home_btn_first);
-        secondpage = (Button) findViewById(R.id.home_btn_second);
-        thirdpage = (Button) findViewById(R.id.home_btn_third);
         vp.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         vp.setCurrentItem(0);
 
-        firstpage.setOnClickListener(movePageListener);
-        firstpage.setTag(0);
-        secondpage.setOnClickListener(movePageListener);
-        secondpage.setTag(1);
-        thirdpage.setOnClickListener(movePageListener);
-        thirdpage.setTag(2);
-
         first = new FirstFragment();
         second = new SecondFragment();
-        third= new ThirdFragment();
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.actionbar, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        //or switch문을 이용하면 될듯 하다.
+        if (id == R.id.first_page) {
+            vp.setCurrentItem(0);
+            return true;
+        }
+        if (id == R.id.second_page) {
+            vp.setCurrentItem(1);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     View.OnClickListener movePageListener = new View.OnClickListener()
@@ -79,8 +89,6 @@ public class HomeActivity extends AppCompatActivity {
                     return first;
                 case 1:
                     return second;
-                case 2:
-                    return third;
                 default:
                     return null;
             }
@@ -89,7 +97,11 @@ public class HomeActivity extends AppCompatActivity {
         @Override
         public int getCount()
         {
-            return 3;
+            return 2;
         }
     }
+
+
+
+
 }

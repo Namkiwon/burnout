@@ -7,35 +7,6 @@
     android:orientation="vertical"
     tools:context="com.project.unithon.unithon.HomeActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:id="@+id/home_btn_first"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="첫번째 탭" />
-
-        <Button
-            android:id="@+id/home_btn_second"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="두번째 탭" />
-
-        <Button
-            android:id="@+id/home_btn_third"
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="세번째 탭" />
-    </LinearLayout>
-
-
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

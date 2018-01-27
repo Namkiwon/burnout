@@ -17,7 +17,7 @@ public class SharedMemory {
     private String resultString;
     private UserInfoVO userinfo;
     private String url;
-    private String token;
+
 
     public String getUrl() {
         return url;

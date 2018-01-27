@@ -4,11 +4,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -16,11 +18,13 @@ import android.widget.Button;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 
+import java.util.UUID;
+
 
 public class MainActivity extends FragmentActivity {
 
 
-    private Intent FirstSurveyIntent;
+    private Intent LoginIntent;
     private Intent HomeIntent;
     private String token;
 
@@ -36,8 +40,12 @@ public class MainActivity extends FragmentActivity {
         sharedMemory = SharedMemory.getinstance();
         userinfo = new UserInfoVO();
 
-        FirstSurveyIntent= new Intent(this, FirstSurveyActivity.class);
+        LoginIntent= new Intent(this, LoginActivity.class);
         HomeIntent = new Intent(this,HomeActivity.class);
+
+        String serialnumber = getDeviceSerialNumber();
+
+        userinfo.setSerialnumber(serialnumber);
 
 
         //토큰값을 받기위해 브로드캐스트 리시버 설
@@ -89,10 +97,22 @@ public class MainActivity extends FragmentActivity {
                     isDownloadFirst = true;
                     userinfo.setToken(token);
                     sharedMemory.setUserinfo(userinfo);;
-                    startActivity(FirstSurveyIntent);
+                    startActivity(LoginIntent);
                     finish();
                 }
         }
     };
+
+
+
+
+    private static String getDeviceSerialNumber() {
+        try {
+            return (String) Build.class.getField("SERIAL").get(null);
+        } catch (Exception ignored) {
+            return null;
+        }
+    }
+
 
 }
