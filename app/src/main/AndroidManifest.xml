@@ -24,8 +24,12 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".Survey.FirstSurveyActivity"/>
         <activity android:name=".Survey.SecondSurveyActivity"/>
+        <activity android:name=".Survey.ThirdSurveyActivity"/>
+        <activity android:name=".Survey.FourthSurveyActivity"/>
+        <activity android:name=".Survey.FiveSurveyActivity"/>
         <activity android:name=".Survey.LastSurveyActivity"/>
-        <activity android:name=".TimelineActivity"></activity>
+        <activity android:name=".TimelineActivity"/>
+        <activity android:name=".Survey.IntroActivity"/>
 
         <!-- [naveroauthlogin][start] 네이버아이디로로그인을 사용하기 위해서 넣어줘야하는 부분 -->
         <activity android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"

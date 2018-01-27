@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="9sp"
+        tools:text="이웃님
+안녕하세요!
+
+오늘날 주변
+10명 중 8명이
+탈진을 경험하고
+있다고해요. "
+        />
+    <ImageView
+        android:layout_width="172dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:paddingLeft="94dp"
+        android:paddingTop="446dp"
+        android:id="@+id/intro1_img"
+        android:background="@drawable/img1"/>
+
+
+</LinearLayout>
