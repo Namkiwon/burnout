@@ -1,6 +1,7 @@
 package com.project.unithon.unithon.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -18,6 +19,7 @@ import com.project.unithon.unithon.MainFirstPage.RecyclerAdapter;
 import com.project.unithon.unithon.MainFirstPage.RecyclerItemClickListener;
 import com.project.unithon.unithon.R;
 import com.project.unithon.unithon.SharedMemory;
+import com.project.unithon.unithon.TimelineActivity;
 
 import java.util.ArrayList;
 
@@ -60,6 +62,8 @@ public class FirstFragment extends Fragment {
             @Override
             public void onItemClick(View view, int position) {
                 Toast.makeText(getActivity(),String.valueOf(position)+"아이템 클릭",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getActivity(), TimelineActivity.class);
+                startActivity(intent);
             }
 
             @Override
