@@ -1,95 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="이웃님의 성별과 연령을 알려주세요"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_sex_man"
-                android:text="남"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="남자"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_sex_woman"
-                android:text="여"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="여자"/>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_10"
-            android:text="10"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_20"
-            android:text="20"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_30"
-            android:text="30"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_40"
-            android:text="40"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_50"
-            android:text="50"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_age_60"
-            android:text="60"/>
-    </LinearLayout>
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_marginTop="21dp"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="9sp"
+        android:textColor="#171717"
+        android:textSize="30sp"
+        tools:text="이웃님의
+성별과 연령을
+알려주세요. " />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/textView4"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:background="@drawable/male_unchoose" />
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/next_btn" />
+
+    <Button
+        android:id="@+id/imageView3"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/textView4"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:background="@drawable/female_unchoose" />
+
+    <Button
+        android:id="@+id/imageView7"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignTop="@+id/jobready"
+        android:background="@drawable/age_10" />
+
+    <Button
+        android:id="@+id/imageView2"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignLeft="@+id/jobready"
+        android:layout_alignStart="@+id/jobready"
+        android:layout_alignTop="@+id/btn_age_30"
+        android:background="@drawable/age_etc" />
+
+    <Button
+        android:id="@+id/imageView"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/age_20" />
+
+    <Button
+        android:id="@+id/jobready"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:background="@drawable/age_30" />
+
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_firstsurvey_next"/>
-</LinearLayout>
+        android:layout_alignEnd="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_marginTop="21dp"
+        android:letterSpacing="-0.04"
+        android:lineSpacingExtra="9sp"
+        android:textColor="#171717"
+        android:textSize="30sp"
+        tools:text="이웃님의
+성별과 연령을
+알려주세요. " />
+
+    <Button
+        android:id="@+id/btn_sex_man"
+        android:layout_width="57dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/textView4"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:background="@drawable/male_unchoose" />
+
+    <Button
+        android:id="@+id/btn_firstsurvey_next"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/next_btn" />
+
+    <Button
+        android:id="@+id/btn_sex_woman"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_below="@+id/textView4"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_toRightOf="@+id/imageView"
+        android:background="@drawable/female_unchoose" />
+
+    <Button
+        android:id="@+id/btn_age_10"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignTop="@+id/jobready"
+        android:background="@drawable/age_10" />
+
+    <Button
+        android:id="@+id/btn_age_60"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignStart="@+id/jobready"
+        android:layout_alignTop="@+id/btn_age_50"
+        android:background="@drawable/age_etc" />
+
+    <Button
+        android:id="@+id/btn_age_20"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/age_20" />
+
+    <Button
+        android:id="@+id/btn_age_30"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_toRightOf="@+id/textView4"
+        android:background="@drawable/age_30" />
+
+
+    <Button
+
+        android:id="@+id/btn_age_50"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_alignTop="@+id/btn_age_40"
+        android:background="@drawable/age_50" />
+
+
+    <Button
+        android:id="@+id/btn_age_40"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_below="@+id/imageView7"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/age_40" />
+
+
+
+
+</RelativeLayout>
+
+
+

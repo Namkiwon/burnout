@@ -51,7 +51,7 @@ public class SecondFragment extends Fragment implements SensorEventListener {
     {
         View view = inflater.inflate(R.layout.fragment_second,container,false);
         compasslayout = (RelativeLayout) view.findViewById(R.id.compass);
-        compassView = new CompassView2(getActivity());
+//        compassView = new CompassView2(getActivity());
 //        getActivity().setContentView(compassView);
 
 
@@ -64,14 +64,14 @@ public class SecondFragment extends Fragment implements SensorEventListener {
                 SensorManager.SENSOR_DELAY_GAME);
 
         // 배경원
-        ImageView circle = new ImageView(getActivity());
-        circle.setImageResource(R.drawable.circle);
+//        ImageView circle = new ImageView(getActivity());
+//        circle.setImageResource(R.drawable.circle);
 
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams
                 (ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-        circle.setLayoutParams(layoutParams);
-        compasslayout.addView(circle);
+//        circle.setLayoutParams(layoutParams);
+//        compasslayout.addView(circle);
 
         //자기 자신
         ImageView dot = new ImageView(getActivity());
@@ -81,8 +81,8 @@ public class SecondFragment extends Fragment implements SensorEventListener {
                 (ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams1.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
         dot.setLayoutParams(layoutParams1);
-        compassView.setLayoutParams(layoutParams1);
-        compasslayout.addView(compassView);
+//        compassView.setLayoutParams(layoutParams1);
+//        compasslayout.addView(compassView);
 //        ll.addView(compassView);
 
 
@@ -139,7 +139,7 @@ public class SecondFragment extends Fragment implements SensorEventListener {
             case Sensor.TYPE_ORIENTATION : //방향센서 값이 바뀌었을때
                 int heading = (int)event.values[0];
                 //헤딩값을 View에 반영한다.
-                compassView.updateUI(heading);
+//                compassView.updateUI(heading);
                 break;
         }
     }

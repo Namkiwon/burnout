@@ -60,15 +60,7 @@ public class IntroActivity extends AppCompatActivity {
             return 2;
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position){
-                case 0: return "첫번째탭";
-                case 1 : return  "두번째탭";
-                default: return null;
-            }
 
-        }
     }
 
 }

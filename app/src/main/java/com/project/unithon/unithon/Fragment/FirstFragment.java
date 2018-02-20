@@ -33,7 +33,7 @@ public class FirstFragment extends Fragment {
     private RecyclerAdapter adapter;
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<ListviewVO> items;
-    
+
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -45,16 +45,19 @@ public class FirstFragment extends Fragment {
     {
         sharedMemory = SharedMemory.getinstance();
         View view = inflater.inflate(R.layout.fragment_first,null);
-        
+
         recyclerView = (RecyclerView) view.findViewById(R.id.firstfragment_recyclerview);
-        
+
         items = new ArrayList<ListviewVO>();
         ListviewVO a = new ListviewVO();
-        a.setWiseSaying(sharedMemory.getSerialnumber());
+        a.setWiseSaying("오늘은 어떤 하루를 보내셨나요?");
         ListviewVO b = new ListviewVO();
-        b.setWiseSaying(sharedMemory.getToken());
+        b.setWiseSaying("다시 돌아오셔서 기뻐요. 오늘의 추천 글귀 보여드릴게요.");
+        ListviewVO c = new ListviewVO();
+        c.setWiseSaying("단순하게 살아라 현대인은 쓸데없는 절차와 일때문에 얼마나 복잡한 삶을 살아가는가.");
         items.add(a);
         items.add(b);
+        items.add(c);
 
         setRecyclerView();
 

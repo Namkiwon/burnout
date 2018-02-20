@@ -1,7 +1,9 @@
 package com.project.unithon.unithon;
 
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 
@@ -20,12 +23,16 @@ import java.util.ArrayList;
 
 
 public class Timelineadapter extends BaseAdapter {
+    Typeface fontnanum;
+    Activity a;
     private static final int TIMELINE_MAIN = 0;
     private static final int TIMELINE_SUB = 1;
     private static final int ITEM_VIEW_TYPE_MAX = 2;
     private ArrayList<TimelineVO> listViewItemList = new ArrayList<TimelineVO>();
 
-    public Timelineadapter() {
+
+    public Timelineadapter(Activity a) {
+        this.a=a;
     }
 
     @Override
@@ -52,6 +59,7 @@ public class Timelineadapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         final Context context = parent.getContext();
         int viewType = getItemViewType(position);
+        fontnanum = Typeface.createFromAsset(a.getAssets(),"NanumMyeongjo.ttf");
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             TimelineVO timelineVO = listViewItemList.get(position);
@@ -59,18 +67,22 @@ public class Timelineadapter extends BaseAdapter {
                 case TIMELINE_MAIN:
                     convertView = inflater.inflate(R.layout.timeline_main_vo, parent, false);
                     TextView mainwording = (TextView) convertView.findViewById(R.id.wording_main);
+                    mainwording.setTypeface(fontnanum);
                     TextView highfive = (TextView) convertView.findViewById(R.id.highfive_main);
                     Log.d("TAGTAGTAG",timelineVO.getContents()+"/"+timelineVO.getHighfive()+"/");
                     mainwording.setText(timelineVO.getContents());
-                    highfive.setText(""+timelineVO.getHighfive());
+                    highfive.setText(""+timelineVO.getHighfive()+"명이 하이파이브해요");
                     break;
                 case TIMELINE_SUB:
                     convertView = inflater.inflate(R.layout.timeline_sub_vo, parent, false);
                     TextView subwording = (TextView) convertView.findViewById(R.id.wording_sub);
                     TextView highfive_sub = (TextView) convertView.findViewById(R.id.highfive_sub);
                     TextView idtextview = (TextView) convertView.findViewById(R.id.userid);
+                    TextView datetv = (TextView) convertView.findViewById(R.id.date);
                     subwording.setText(timelineVO.getContents());
-                    highfive_sub.setText(""+timelineVO.getHighfive());
+                    highfive_sub.setText(""+timelineVO.getHighfive()+"명이 하이파이브해요");
+                    datetv.setText(""+timelineVO.getDate()+"일 전");
+
                     idtextview.setText(timelineVO.getName());
                     break;
             }
@@ -91,12 +103,13 @@ public class Timelineadapter extends BaseAdapter {
         listViewItemList.add(item);
     }
 
-    public void addItem(String userid,String wording,int highfive) {
+    public void addItem(String userid,String wording,int highfive,int date) {
         TimelineVO item = new TimelineVO();
         item.setType(TIMELINE_SUB);
         item.setContents(wording);
         item.setName(userid);
         item.setHighfive(highfive);
+        item.setDate(date);
         listViewItemList.add(item);
     }
 }

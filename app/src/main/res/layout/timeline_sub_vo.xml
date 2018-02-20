@@ -1,55 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_width="360dp"
+    android:layout_height="160dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp">
 
-    <LinearLayout
-        android:layout_height="30dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        >
+    <TextView
+        android:id="@+id/userid"
+        android:layout_width="70dp"
+        android:layout_height="18dp"
+        android:text="익명의 번아웃2"
+        android:layout_marginBottom="128dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="264dp"
+        android:layout_marginTop="14dp"
+        android:textSize="12sp"
+        android:textColor="#4a4a4a"/>
 
-        <TextView
-            android:id="@+id/userid"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="익명의 번아웃2" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text=" 1주일 전" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="43dp"
+        android:layout_height="18dp"
+        android:text=" 1주일 전"
+        android:layout_marginBottom="128dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginRight="213dp"
+        android:layout_marginTop="14dp"
+        android:textSize="12sp"
+        android:textColor="#4a4a4a"/>
 
     <TextView
         android:id="@+id/wording_sub"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:letterSpacing="0.01"
+        android:lineSpacingMultiplier="1.57"
+        tools:text="일을 하면서 얻는 것이 없다고 생각했는데
+너무 복잡하고 어렵게만 생각하고 있었던것 같아요."
+        android:layout_marginBottom="68dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="48dp"
+        />
+    <Button
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="314dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/btn_highfive_press" />
+
+    <TextView
+        android:id="@+id/highfive_sub"
+        android:layout_width="122dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="188dp"
+        android:layout_marginTop="127dp"
+        android:textSize="12sp"
+        android:textColor="#9b9b9b"
+        />
+
+    <Button
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="282dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="128dp"
+        android:background="@drawable/ic_save" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="46dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="113dp"
+        android:background="#e7ecef"/>
+
+    <TextView
+        android:text="담기"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="317dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="127dp"
+        android:layout_width="23dp"
+        android:layout_height="18dp"
+        android:textSize="12sp"
+        android:textColor="#9b9b9b"
+        />
 
 
-    <LinearLayout
-        android:layout_height="30dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-
-        <TextView
-            android:id="@+id/highfive_sub"
-            android:layout_width="100dp"
-            android:layout_height="match_parent" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
+</RelativeLayout>

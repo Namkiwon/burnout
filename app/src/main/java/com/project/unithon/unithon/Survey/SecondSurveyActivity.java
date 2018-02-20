@@ -96,7 +96,6 @@ public class SecondSurveyActivity extends AppCompatActivity {
                     sharedMemory.getUserinfo().setJob("취준생");
                     break;
                 case R.id.btn_secondsurvey_next:
-                    Log.d("asdf",sharedMemory.getUserinfo().getJob());
                     Intent intent = new Intent(SecondSurveyActivity.this,ThirdSurveyActivity.class);
                     startActivity(intent);
                     break;

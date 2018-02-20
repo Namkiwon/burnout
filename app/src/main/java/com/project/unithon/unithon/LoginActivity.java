@@ -27,10 +27,9 @@ public class LoginActivity extends FragmentActivity {
         setContentView(R.layout.activity_login);
 
         GuestLogin = (Button) findViewById(R.id.login_guest);
-        EmailLogin = (Button) findViewById(R.id.login_email);
 
         GuestLogin.setOnClickListener(bListener);
-        EmailLogin.setOnClickListener(bListener);
+
 
     }
 
@@ -43,11 +42,8 @@ public class LoginActivity extends FragmentActivity {
                     startActivity(FirstSurveyIntent);
                     finish();
                     break;
-                case R.id.login_email:
-                    FirstSurveyIntent = new Intent(LoginActivity.this,FirstSurveyActivity.class);
-                    startActivity(FirstSurveyIntent);
-                    finish();
-                    break;
+
+
 
             }
         }

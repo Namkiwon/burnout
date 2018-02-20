@@ -1,59 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="360dp"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_height="30dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="운영자" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="..." />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/wording_main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="210dp"
+        android:background="@drawable/img_bg"
         android:orientation="horizontal">
 
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="43dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="166dp"
+            android:background="#ebebeb"/>
+
+
+        <TextView
+            android:id="@+id/wording_main"
+            android:layout_width="280dp"
+            android:layout_height="76dp"
+            android:layout_marginBottom="90dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="44dp"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="43dp"
+            android:letterSpacing="0.26"
+            android:textColor="#ffffff"
+            tools:text="단순하게 살아라. 현대인은 쓸데없는 절차와 일 때문에 얼마나 복잡한 삶을 살아가는가? -이드리스 샤흐" />
+
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="315dp"
+            android:layout_marginTop="174dp"
+            android:background="@drawable/btn_highfive_press" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="162dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="320dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/invalid_name" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginBottom="74dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/ic_mark_right" />
 
         <TextView
             android:id="@+id/highfive_main"
-            android:layout_width="100dp"
-            android:layout_height="match_parent" />
+            android:layout_width="122dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="182dp"
+            android:layout_marginTop="177dp"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            />
 
         <Button
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="276dp"
+            android:layout_marginRight="66dp"
+            android:layout_marginTop="181dp"
+            android:background="@drawable/ic_save" />
+
+        <TextView
+            android:text="담기"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="311dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="180dp"
+            android:layout_width="23dp"
+            android:layout_height="18dp"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="360dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="1dp">
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="1dp"
+            android:background="#ffffff">
+        </ImageView>
+
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#5dc4c9"
+            tools:text="다른 번이웃들의 이야기"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="168dp"
+            android:layout_marginTop="4dp"/>
+    </FrameLayout>
 
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_weight="1"
-        app:srcCompat="@android:drawable/btn_star" />
 
 
 </LinearLayout>

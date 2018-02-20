@@ -3,6 +3,16 @@ package com.project.unithon.unithon;
 
 public class TimelineVO {
     private int type;
+
+    public int getDate() {
+        return date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    private int date; //날짜 차이
     private String contents;
     private int highfive;
     private String name;

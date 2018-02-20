@@ -1,15 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="640dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:weightSum="2"
     android:orientation="vertical"
     android:id="@+id/parentlayout">
+
+   <RelativeLayout
+       android:layout_width="379dp"
+       android:layout_height="336dp"
+       android:background="@drawable/circle">
+       
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_marginLeft="170dp"
+           android:layout_marginTop="164dp"
+           android:background="@drawable/ic_neighbor_press"
+           />
+   </RelativeLayout>
+
     <RelativeLayout
+        android:layout_width="330dp"
+        android:layout_height="218dp"
+        android:layout_marginBottom="51dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="50dp"
         android:id="@+id/compass"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"></RelativeLayout>
+        android:background="@drawable/rectangle_3">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:textSize="12sp"
+            android:textColor="#4a4a4a"
+            tools:text="익명의 번이웃"
+            />
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="22dp"
+            android:textSize="10sp"
+            android:textColor="#4a4a4a"
+            tools:text="1주일 전"
+            />
+
+        <TextView
+            android:layout_width="26dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="235dp"
+            android:layout_marginTop="19dp"
+            android:textSize="10sp"
+            android:textColor="#4a4a4a"
+            android:gravity="end"
+            tools:text="500m"
+            />
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="52dp"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:letterSpacing="-0.01"
+            android:lineSpacingExtra="6sp"
+            tools:text="“하지만 이 환자는 왜 이런 그림을 그렸을까요?”
+“그건 모르지. 나도 한번 물어보고 싶네. 아니, 그보다 더 궁금한 것은 어떻게 이걸 그렸느냐는 거야. "
+            />
+        
+        <View
+            android:layout_width="240dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/line"/>
+        
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="181dp"
+            android:background="@drawable/btn_highfive_press"/>
+
+        <TextView
+            android:layout_width="102dp"
+            android:layout_height="15dp"
+            android:textSize="10sp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="185dp"
+            android:textColor="#9b9b9b"
+            tools:text="245명이 하이파이브해요"
+            />
+        
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="216dp"
+            android:layout_marginTop="184dp"
+            android:background="@drawable/download"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="42dp"
+        android:layout_height="218dp"
+        android:layout_marginBottom="51dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/rectangle_3"/>
+
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"

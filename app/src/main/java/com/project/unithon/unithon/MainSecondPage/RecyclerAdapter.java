@@ -38,10 +38,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter<ItemViewHolder>{
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         ListviewVO item = items.get(position);
-        holder.a.setText(item.getA());
-        holder.b.setText(item.getB());
-        holder.c.setText(item.getC());
-        holder.ll.setBackgroundResource(R.drawable.bbb);
     }
     @Override
     public int getItemCount() {

@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Unithon.iml" filepath="$PROJECT_DIR$/Unithon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Unithon.iml" filepath="$PROJECT_DIR$/Unithon.iml" />
       <module fileurl="file://C:\Users\Jun\Desktop\U\Unithon\Unithon.iml" filepath="C:\Users\Jun\Desktop\U\Unithon\Unithon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\Jun\Desktop\U\Unithon\app\app.iml" filepath="C:\Users\Jun\Desktop\U\Unithon\app\app.iml" />
     </modules>

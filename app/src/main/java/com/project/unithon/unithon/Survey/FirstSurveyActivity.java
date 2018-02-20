@@ -44,19 +44,19 @@ public class FirstSurveyActivity extends AppCompatActivity{
         btn_sex_woman = (Button)findViewById(R.id.btn_sex_woman);
         btn_sex_woman.setOnClickListener(bListener);
 
-        btn_age_10 = (Button)findViewById(R.id.btn_age_10);
-        btn_age_20 = (Button)findViewById(R.id.btn_age_20);
-        btn_age_30 = (Button)findViewById(R.id.btn_age_30);
-        btn_age_40 = (Button)findViewById(R.id.btn_age_40);
-        btn_age_50 = (Button)findViewById(R.id.btn_age_50);
-        btn_age_60 = (Button)findViewById(R.id.btn_age_60);
-
-        btn_age_10.setOnClickListener(bListener);
-        btn_age_20.setOnClickListener(bListener);
-        btn_age_30.setOnClickListener(bListener);
-        btn_age_40.setOnClickListener(bListener);
-        btn_age_50.setOnClickListener(bListener);
-        btn_age_60.setOnClickListener(bListener);
+//        btn_age_10 = (Button)findViewById(R.id.btn_age_10);
+//        btn_age_20 = (Button)findViewById(R.id.btn_age_20);
+//        btn_age_30 = (Button)findViewById(R.id.btn_age_30);
+//        btn_age_40 = (Button)findViewById(R.id.btn_age_40);
+//        btn_age_50 = (Button)findViewById(R.id.btn_age_50);
+//        btn_age_60 = (Button)findViewById(R.id.btn_age_60);
+//
+//        btn_age_10.setOnClickListener(bListener);
+//        btn_age_20.setOnClickListener(bListener);
+//        btn_age_30.setOnClickListener(bListener);
+//        btn_age_40.setOnClickListener(bListener);
+//        btn_age_50.setOnClickListener(bListener);
+//        btn_age_60.setOnClickListener(bListener);
 
 
     }

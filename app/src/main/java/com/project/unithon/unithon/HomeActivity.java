@@ -36,10 +36,11 @@ public class HomeActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        tabLayout = (TabLayout) findViewById(R.id.home_tab);
+
         vp = (ViewPager) findViewById(R.id.home_viewpager);
         vp.setAdapter(new pagerAdapter(getSupportFragmentManager()));
         vp.setCurrentItem(0);
+        tabLayout = (TabLayout) findViewById(R.id.home_tab);
         tabLayout.setupWithViewPager(vp);
         first = new FirstFragment();
         second = new SecondFragment();
